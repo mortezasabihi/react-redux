@@ -1,16 +1,33 @@
+import { Product, Products, Categories } from "@/types/products";
 import api from "../../config";
 
-export const getAllProducts = async () => {
-  const response = await api.get("/products");
+/**
+ *  Get all products
+ * @async
+ * @returns {Promise<Products>}
+ */
+export const getAllProducts = async (): Promise<Products> => {
+  const response = await api.get<Products>("/products");
   return response.data;
 };
 
-export const getProductById = async (id: number) => {
-  const response = await api.get(`/products/${id}`);
+/**
+ * Get product by id
+ * @param id
+ * @async
+ * @returns {Promise<Product>}
+ */
+export const getProductById = async (id: number): Promise<Product> => {
+  const response = await api.get<Product>(`/products/${id}`);
   return response.data;
 };
 
-export const getAllCategories = async () => {
-  const response = await api.get("/products/categories");
+/**
+ * Get all categories
+ * @async
+ * @returns {Promise<Categories>}
+ */
+export const getAllCategories = async (): Promise<Categories> => {
+  const response = await api.get<Categories>("/products/categories");
   return response.data;
 };
