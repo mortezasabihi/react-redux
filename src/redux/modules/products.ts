@@ -15,24 +15,7 @@ interface IProductsState {
 }
 
 const initialState: IState = {
-  items: [
-    {
-      id: 1,
-      title: "Product 1",
-      price: "100",
-      description: "Product 1 description",
-      image: "https://via.placeholder.com/150",
-      category: "Category 1",
-    },
-    {
-      id: 2,
-      title: "Product 2",
-      price: "200",
-      description: "Product 2 description",
-      image: "https://via.placeholder.com/150",
-      category: "Category 2",
-    },
-  ],
+  items: [],
   error: null,
   loading: false,
 };

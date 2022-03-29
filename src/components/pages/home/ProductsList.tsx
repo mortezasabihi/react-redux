@@ -10,7 +10,7 @@ const ProductsList: FC = () => {
   return (
     <Grid container spacing={2} alignItems="stretch">
       {items.map((item, i) => (
-        <Grid key={i} item xs={4}>
+        <Grid key={i} item xs={12} sm={6} md={4}>
           <ProductCard product={item} />
         </Grid>
       ))}
