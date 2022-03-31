@@ -9,7 +9,6 @@ interface IState {
   error: Error | null;
   loading: boolean;
 }
-
 interface IProductsState {
   products: IState;
 }
@@ -78,7 +77,7 @@ export function fetchProducts() {
   };
 }
 
-// reducer (using immer)
+// reducer
 export function reducer(
   state: IState = initialState,
   action: AppActions
@@ -102,6 +101,6 @@ export function reducer(
   });
 }
 
-// selector
+// selectors
 export const getItems = (state: IProductsState) => state.products.items;
 export const getLoading = (state: IProductsState) => state.products.loading;

@@ -10,14 +10,16 @@ import {
 } from "@mui/material";
 import { AddShoppingCart } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import { truncate } from "@/utils";
+import { truncate } from "@/lib/utils";
 
 interface IProps {
   product: Product;
+  onAddToCart?: () => void;
 }
 
 const ProductCard: FC<IProps> = ({
   product: { image, title, price, description, id },
+  onAddToCart,
 }) => {
   return (
     <Card
@@ -40,7 +42,12 @@ const ProductCard: FC<IProps> = ({
         </Typography>
       </CardContent>
       <CardActions style={{ flexGrow: 1, alignItems: "flex-end" }}>
-        <Button size="small" variant="outlined" startIcon={<AddShoppingCart />}>
+        <Button
+          onClick={onAddToCart}
+          size="small"
+          variant="outlined"
+          startIcon={<AddShoppingCart />}
+        >
           Add to cart
         </Button>
 
