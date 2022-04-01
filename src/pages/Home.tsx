@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 import { fetchProducts, getLoading } from "@/redux/modules/products";
 import { ProductsList, ProductsLoading } from "@/components/pages/home";
 
-const Home: FC = () => {
+const HomePage: FC = () => {
   const dispatch = useDispatch();
   const loading = useSelector(getLoading);
 
@@ -28,4 +28,4 @@ const Home: FC = () => {
   );
 };
 
-export default Home;
+export default HomePage;

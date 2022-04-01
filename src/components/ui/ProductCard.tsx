@@ -30,11 +30,16 @@ const ProductCard: FC<IProps> = ({
         flexDirection: "column",
       }}
     >
-      <Link to={`/${id}`}>
+      <Link to={`/product/${id}`}>
         <CardMedia component="img" height="300" image={image} alt={title} />
       </Link>
       <CardContent>
-        <Typography gutterBottom variant="h5" component={Link} to={`/${id}`}>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component={Link}
+          to={`/product/${id}`}
+        >
           {title} - ${price}
         </Typography>
         <Typography variant="body2" color="text.secondary">
@@ -51,7 +56,7 @@ const ProductCard: FC<IProps> = ({
           Add to cart
         </Button>
 
-        <Button component={Link} to={`/${id}`} size="small">
+        <Button component={Link} to={`/product/${id}`} size="small">
           View
         </Button>
       </CardActions>

@@ -2,7 +2,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import configureStore from "@/redux";
-import { Home } from "@/pages";
+import { Home, Product } from "@/pages";
 import AxiosErrorHandler from "@/services/errorHandler/AxiosErrorHandler";
 import DefaultLayout from "@/components/layouts/default";
 
@@ -19,6 +19,7 @@ function App() {
           <Routes>
             <Route element={<DefaultLayout />}>
               <Route path="/" element={<Home />} />
+              <Route path="/product/:id" element={<Product />} />
               <Route
                 path="*"
                 element={
